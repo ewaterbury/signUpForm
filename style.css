@@ -1,0 +1,149 @@
+@font-face {
+    font-family: norse-bold;
+    src: url(Norse-Bold.otf) format('opentype');
+}
+
+:root {
+    --background-color:#f9fafb;
+    --form-background-color: #ffffff;
+    --green: #596D48;
+    --input-border-std: #E5E7EB;
+    --input-border-fcs: #2b59ff;
+    --input-border-err: #FF0000;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: Inter,Helvetica Neue,Helvetica,Arial,sans-serif;
+}
+ 
+body {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    background-color: var(--background-color);
+}
+
+#logo_container{
+    display: flex;
+    flex: 1; /*used inplace of flex-grow*/
+}
+
+#potet{
+    object-fit: cover;
+    width: 100%;
+}
+
+#odin_logo{
+    object-fit: cover;
+    height: 85%;
+}
+
+#logo{
+    position: absolute;
+    top:65vh;
+    left: 0px;
+    height: 20vh;
+    width: calc(1/3*100vw);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    font-family: norse-bold;
+    font-size: 6rem;
+    color: white;
+    opacity: .5;
+
+}
+
+#main_container{
+    display: flex;
+    flex: 2;/*used inplace of flex-grow*/
+    flex-direction: column;
+    justify-content: center;
+
+    gap: 4vh;
+    background-color: var(--background-color);
+}
+
+#main_container>div, #main_container>form{
+    padding-left: 4vh;
+}
+
+#intro {
+    font-size: 1.25rem;
+    
+}
+
+#intro>p {
+    padding-right: 28vh;
+}
+
+form {
+    background-color: var(--form-background-color);
+    display: flex;
+    box-shadow: 3px 3px 3px lightgrey;
+}
+
+legend {
+    font-size: 1.25rem;
+    font-family: inherit;
+}
+
+fieldset{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: 3vh;
+    border: none;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+    margin-top: 2vh;
+}
+
+.form_section{
+    display: flex;
+    justify-content: flex-start;
+    gap: 6vh;
+}
+
+.form_input{
+    display: flex;
+    flex-direction: column;
+    font-family: inherit;
+    font-size: .6rem;
+}
+
+input {
+    border-radius: 5px;
+    font-family: inherit;
+    font-size: 1rem;
+    border: 1px solid var(--input-border-std);
+}
+
+input:focus {
+    outline: 1px solid var(--input-border-fcs);
+    box-shadow: 3px 3px 3px lightgrey;
+}
+
+button {
+    width: 200px;
+    height: 45px;
+    padding: 2vh;
+    border: none;
+    border-radius: 8px;
+    background-color: var(--green);
+    font-size: .9rem;
+    color: white;
+    line-height: .7rem;
+    box-shadow: 2px 2px 2px lightgrey;
+}
+
+a:link{
+    color: var(--green);
+    text-decoration: none;
+}
+
+a:visited{
+    color: var(--green);
+    text-decoration: none;
+}
